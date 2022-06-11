@@ -33,7 +33,7 @@ Example:
 
 ```clojure
 ($= 5 + 5 * 5) ;; => 30
-(macroexpand '($= 5 + 5 * 5) ;; => (+ (* 5 5) 5)
+(macroexpand '($= 5 + 5 * 5)) ;; => (+ (* 5 5) 5)
 ```
 
 Coming soon...
