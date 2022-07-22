@@ -9,3 +9,7 @@
   (for [a (range (count v))
         b (range a (count v))]
     (subvec v a (inc b))))
+
+(def zip
+  "Returns the zip of input colls."
+  (partial map vector))
