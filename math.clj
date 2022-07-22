@@ -26,12 +26,13 @@
   [a b f]
   (apply * (map f (range a (inc b)))))
 
-(defn !
+(def !
   "Returns n!."
-  [n]
-  (if (= n 0)
-    1
-    (* (! (dec n)) n)))
+  (memoize 
+   (fn [n]
+     (if (zero? n)
+       1
+       (*' (! (dec n)) n)))))
 
 (defn integrate
   "Returns ∫ₐᵇ f(x) x*dx with the specified precision."
